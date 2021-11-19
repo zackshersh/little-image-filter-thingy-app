@@ -197,7 +197,7 @@ export class Image {
 
     applyFilters(){
         // let data = imageData.data;
-
+        console.log('%cAPPLYING FILTERS','background-color:#00ff00')
         let imageData = this.ctx.getImageData(0,0,this.w,this.h)
 
         //previous val will be the imageData provided as a reduce argument in first iteration, after that it will be image data returned from previous interation
