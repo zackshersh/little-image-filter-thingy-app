@@ -1,0 +1,257 @@
+
+
+
+.Setting-Suite {
+    background-color: var(--dark);
+    padding: 24px 24px 0px 24px;
+    min-width: 350px;;
+    overflow: hidden;
+    border: 1px solid black;
+
+    border-width: 0px 0px 0px 1px;
+}
+
+.Zoom-Cont {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+}
+
+.Zoom-Cont > button {
+    margin: 4px;
+    font-size: 14px;
+    padding: 20px;
+    background-color: rgba(255,255,255,1);
+    backdrop-filter: blur(8px);
+}
+
+.Zoom-Cont > button:hover {
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    .Zoom-Cont > button {
+        padding: 8px
+    }
+}
+
+
+
+
+.File-Upload {
+    background-color: var(--b);
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    transition: all;
+    transition-duration: 1s;
+
+    /* padding: 12px;
+    border-radius: 15px; */
+    /* margin: -2px */
+}
+
+
+.File-Upload > button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: width, height, padding;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 12px;
+}
+
+.File-Upload > button:hover {
+    background-color: var(--b);
+}
+
+.File-Upload > p {
+    font-size: 14px;
+    margin-left: 12px;
+    color: white;
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+/* Two classes for transitioning between depending on whether image has been uploaded */
+.File-Upload-True {
+    padding: 12px;
+    margin: 0px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    border: 1px solid white;
+    height: auto;
+    justify-content: space-between;
+}
+
+.File-Upload-False {
+    padding: 12px 48px 12px 48px;
+    margin: -24px -24px 24px -24px;
+    border-radius: 0px;
+    /* border: none; */
+    border: 1px solid black;
+    border-width: 0px 0px 1px 0px;
+    height: 30%;
+}
+
+.File-Upload-False > button {
+    font-size: 24px;
+    padding: 12px;
+    font-weight: 100;
+    /* border-width: 1px; */
+    height: 80%;
+    width: 80%;
+}
+
+.File-Upload-False > p {
+    margin-left: 24px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+    /* .File-Upload-False {
+        height: 50%;
+    } */
+
+    .Setting-Suite {
+        border-width: 0px;
+    }
+
+    .File-Upload > p {
+        font-size: 10px;
+    }
+
+    .File-Upload-False {
+        border-width: 1px 0px 1px 0px;
+    }
+
+    .File-Upload-False > button {
+        font-size: 14px;
+        min-height: 40px;
+        border: 1px solid white;
+    } 
+
+    .File-Upload-True {
+        padding: 0px;
+        border-radius: 50px;
+    }
+
+    .File-Upload-True > button {
+        border-top: 0px;
+        border-left: 0px;
+        border-bottom: 0px;
+    }
+
+    .File-Upload-True > p {
+        margin-right: 16px;
+    }
+}
+
+
+
+
+.Filter-Card-Cont {
+    overflow: scroll;
+    /* max-height: 600px; */
+    height: 70%;
+    padding-right: 8px;
+}
+
+.Filter-Card-Cont::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0);
+    width: 8px;
+    margin: 8px;
+}
+
+.Filter-Card-Cont::-webkit-scrollbar-corner {
+    background-color: rgba(0,0,0,0);
+}
+
+.Filter-Card-Cont::-webkit-scrollbar-thumb {
+    /* background: yellow; */
+    background: none;
+    border: 1px solid yellow;
+    border-radius: 50px;
+}
+
+.Filter-Card {
+    text-transform: capitalize;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 24px;
+    padding: 12px;
+    margin-top: 4px;
+    position: relative;
+}
+
+.Filter-Card > span {
+    display: flex; 
+    flex-direction: row;
+    /* display: inline; */
+    /* float: left */
+}
+
+.Filter-Card > span > * {
+    margin-right: 8px;
+}
+
+
+.Filter-Card > *:not(span) {
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.Filter-Card > span > .Display-Check-Cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Filter-Card > .Checkbox-Cont {
+    display: flex;
+    align-items: center;
+}
+
+.Filter-Card > .Checkbox-Cont > p {
+    font-size: 12px;
+    color: #787878
+}
+
+.Filter-Card > .Checkbox-Cont > input {
+    margin: 4px
+}
+
+.Filter-Card > .Checkbox-Cont > input:checked {
+    background-color: yellow;
+}
+.Filter-Card > .Checkbox-Cont > input[type='checkbox']{
+    padding-left: 24px;
+    /* margin-left: 16px; */
+    border: 1px solid #787878
+}
+
+.Filter-Card > .x-out {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 8px 16px 0px 0px;
+    border: 0px
+}
+
+
+@media screen and (max-width: 1000px) {
+    .Filter-Card-Cont {
+        height: 70%;
+    }
+
+    .Filter-Card > span > h3 {
+        font-size: 14px;
+    }
+}
+

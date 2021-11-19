@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/little-image-filter-thingy-app/static/js/main.d9f3bb47.chunk.js",
+    "main.js.map": "/little-image-filter-thingy-app/static/js/main.d9f3bb47.chunk.js.map",
+    "runtime-main.js": "/little-image-filter-thingy-app/static/js/runtime-main.9c02e980.js",
+    "runtime-main.js.map": "/little-image-filter-thingy-app/static/js/runtime-main.9c02e980.js.map",
+    "static/js/2.a0b74afe.chunk.js": "/little-image-filter-thingy-app/static/js/2.a0b74afe.chunk.js",
+    "static/js/2.a0b74afe.chunk.js.map": "/little-image-filter-thingy-app/static/js/2.a0b74afe.chunk.js.map",
+    "index.html": "/little-image-filter-thingy-app/index.html",
+    "static/js/2.a0b74afe.chunk.js.LICENSE.txt": "/little-image-filter-thingy-app/static/js/2.a0b74afe.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c02e980.js",
+    "static/js/2.a0b74afe.chunk.js",
+    "static/js/main.d9f3bb47.chunk.js"
+  ]
+}

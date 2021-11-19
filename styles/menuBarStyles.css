@@ -1,0 +1,218 @@
+
+.Menu-Bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: grid;
+    /* height: 35px; */
+    grid-template-columns: repeat(8, 1fr);
+    z-index: 10;
+    background-color: black;
+}
+
+
+
+
+.Menu-Bar-Cont {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.Menu-Bar-Button {
+    height: 36px;
+}
+
+.Menu-Bar-Cont:nth-child(3){
+    border-right: none;
+}
+
+.Add-Filter {
+    /* position: absolute;  */
+    position: relative;
+    /* overflow: hidden; */
+    top: 0px;
+    left: 0px; 
+    width: 100%;
+    grid-column: 2/7;
+
+    /* border-radius: 12px; */
+}
+
+.Add-Filter-Button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+}
+
+.Add-Filter-Button > button {
+    background-color: var(--y);
+    border-radius: 0px;
+    width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.Add-Filter-Button > button:hover {
+    background-color: black;
+}
+
+.Add-Filter-Options {
+
+    background-color: var(--dark);
+    border: 1px solid black;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0,0,0.3,1.0);
+    position: absolute;
+    border-radius: 0px 0px 15px 15px;
+
+
+    overflow: hidden;
+}
+
+.Filter-Option {
+    color: white;
+    padding: 4px 8px 4px 8px;
+    display: inline-block;
+    margin: 4px
+    /* width: 40px */
+}
+
+.Filter-Option:hover {
+    color: black;
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+.Preview-Res {
+    grid-column: 7/9;
+    position: relative;
+}
+
+.Res-Button-Cont {
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* height: 100%; */
+}
+
+.Res-Button-Cont > button {
+    background-color: var(--g);
+    border-radius: 0px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.Res-Button-Cont > button:hover {
+    background-color: black;
+    color: white;
+}
+
+.Res-Button-Cont > button > span {
+    background-color: black;
+    border-radius: 50px;
+    color: var(--g);
+    padding: 4px 8px;
+    margin: -4px 4px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.Res-Options-Cont {
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.Res-Options-Cont > button {
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    transition-property: height, padding;
+    transition-duration: 0.3s;
+    background-color: var(--dark);
+    color: var(--g)
+}
+
+
+.Res-Options-Cont > button:hover {
+    background-color: var(--g);
+    color: black;
+}
+
+.Res-Options-Cont>button:nth-child(4){
+    border-bottom: 0px;
+}
+
+.Res-Options-Expanded-True {
+    padding: 36px 0px 0px 0px;
+    height: auto;
+}
+
+.Res-Options-Expanded-False {
+    padding: 0px;
+    height: 0px;
+}
+
+.Res-Options-Expanded-False > button {
+    height: 0px;
+    padding: 0px;
+}
+
+.Export-Cont {
+    grid-column: 1/2;
+}
+
+.Export-Cont > button {
+    background-color: var(--b);
+    border-radius: 0px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.Export-Cont > button:hover {
+    background-color: black;
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .Add-Filter {
+        grid-column: 3/7
+    }
+
+    .Export-Cont {
+        grid-column: 1/3;
+    }
+
+}
