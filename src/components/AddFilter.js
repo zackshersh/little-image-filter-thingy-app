@@ -46,6 +46,7 @@ const AddFilter = ({refreshApp}) => {
         let defaultOptions = JSON.parse(e.target.dataset.options)
         allFilters.forEach((filter,index) => {
             console.log(filterNames[index])
+            console.log(e.target.dataset.filter)
             if(e.target.dataset.filter == filterNames[index]){
                 let tc = e.target.textContent.toLowerCase()
                 console.log('FILTER MATCHED = ' + filterNames[index]);
