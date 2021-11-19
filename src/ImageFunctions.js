@@ -74,6 +74,7 @@ export class Image {
     }
 
     addFilter(activeFilter){
+        console.log('ADDING FILTER')
         this.activeFilters.push(activeFilter);
         this.compileFilters()
     }
