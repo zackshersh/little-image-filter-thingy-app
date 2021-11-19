@@ -25,7 +25,7 @@ export class Image {
 
     init(canvas){
 
-        console.log('%cV 1.1','background-color:#ff00ff;padding:24px 48px 24px 48px;color:black')
+        console.log('%cV 1.2','background-color:#ff00ff;padding:24px 48px 24px 48px;color:black')
 
         this.canvas = canvas
         console.log('%c Initializing Image Object','background-color:orange;color:black')
@@ -96,7 +96,8 @@ export class Image {
         let byPixelFilterBatch = [];
         
         this.activeFilters.forEach(filter => {
-            let type = filter.constructor.name;
+            console.log(filter)
+            let type = filter.type;
 
             if(!filter.active){
                 return;
@@ -187,7 +188,7 @@ export class Image {
         this.ctx.drawImage(this.image,0,0,this.w,this.h);
 
 
-        
+
         if(this.filtersCompiled.length > 0){
             console.log('COMPILED FILTERS FOUND')
             let filteredData = this.applyFilters();
@@ -335,6 +336,7 @@ export class ByPixelFilter{
         this.name = name;
         this.options = options;
         this.active = true;
+        this.type = "ByPixelFilter";
     }
 }
 
@@ -344,5 +346,7 @@ export class ByBlockFilter{
         this.name = name;
         this.options = options;
         this.active = true;
+        this.type = "ByBlockFilter";
     }
+
 }
