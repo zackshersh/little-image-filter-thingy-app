@@ -25,6 +25,8 @@ export class Image {
 
     init(canvas){
 
+        console.log('%cV 1.0','background-color:#ff00ff')
+
         this.canvas = canvas
         console.log('%c Initializing Image Object','background-color:orange;color:black')
         console.log('%c                             ','background-color: orange;color:black;width:200px;white-space:prewrap;')
