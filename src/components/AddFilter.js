@@ -48,7 +48,7 @@ const AddFilter = ({refreshApp}) => {
             console.log(filterNames[index])
             if(e.target.dataset.filter == filterNames[index]){
                 let tc = e.target.textContent.toLowerCase()
-                console.log('FILTER MATCHED = ' + filter.name)
+                console.log('FILTER MATCHED = ' + filterNames[index]);
                 if(tc == 'bitmap' || tc == 'pixelate' || tc=='wave'){
                     mainImage.addFilter(new ByBlockFilter(filter,{...defaultOptions}))
                 } else {
