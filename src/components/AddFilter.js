@@ -78,15 +78,15 @@ const AddFilter = ({refreshApp}) => {
                 <button className="AF-Button Menu-Bar-Button" onMouseDown={handleExpand}>Filters +</button>
             </div>
             <div style={{width:width,height:height,paddingBottom:padding,paddingTop:padding*2}} className="Add-Filter-Options">
-                <FilterOption handler={handleFilterOption} filter={bitmap} title={'Bitmap'} defaultOptions={JSON.stringify({blockScaleFactor:4,randomPattern:false})} />
-                <FilterOption handler={handleFilterOption} filter={exposure} title={'Exposure'} defaultOptions={JSON.stringify({value:40})}/>
-                <FilterOption handler={handleFilterOption} filter={gradientMap} title={'Gradient Map'} defaultOptions={JSON.stringify({darkColor:[0,0,255],lightColor:[255,255,255]})}/>
-                <FilterOption handler={handleFilterOption} filter={invert} title={'Invert'} defaultOptions={JSON.stringify({filler:1})}/>
-                <FilterOption handler={handleFilterOption} filter={noise} title={'Noise'} defaultOptions={JSON.stringify({max:100,monochromatic:true})}/>
-                <FilterOption handler={handleFilterOption} filter={pixelate} title={'Pixelate'} defaultOptions={JSON.stringify({pixelWidth:12})}/>
-                <FilterOption handler={handleFilterOption} filter={saturation} title={'Saturation'} defaultOptions={JSON.stringify({amount:3})}/>
-                <FilterOption handler={handleFilterOption} filter={threshold} title={'Threshold'} defaultOptions={JSON.stringify({cutoff:120})}/>
-                <FilterOption handler={handleFilterOption} filter={wave} title={'Wave'} defaultOptions={JSON.stringify({xAmplitude:20,xWavelength:120,xShift:0,yAmplitude:20,yWavelength:60,yShift:0,warp:false})}/>
+                <FilterOption handler={handleFilterOption} filter={bitmap} name="bitmap" title={'Bitmap'} defaultOptions={JSON.stringify({blockScaleFactor:4,randomPattern:false})} />
+                <FilterOption handler={handleFilterOption} filter={exposure} name="exposure" title={'Exposure'} defaultOptions={JSON.stringify({value:40})}/>
+                <FilterOption handler={handleFilterOption} filter={gradientMap} name="gradientMap" title={'Gradient Map'} defaultOptions={JSON.stringify({darkColor:[0,0,255],lightColor:[255,255,255]})}/>
+                <FilterOption handler={handleFilterOption} filter={invert} name="invert" title={'Invert'} defaultOptions={JSON.stringify({filler:1})}/>
+                <FilterOption handler={handleFilterOption} filter={noise} name="noise" title={'Noise'} defaultOptions={JSON.stringify({max:100,monochromatic:true})}/>
+                <FilterOption handler={handleFilterOption} filter={pixelate} name="pixelate" title={'Pixelate'} defaultOptions={JSON.stringify({pixelWidth:12})}/>
+                <FilterOption handler={handleFilterOption} filter={saturation} name="saturate" title={'Saturation'} defaultOptions={JSON.stringify({amount:3})}/>
+                <FilterOption handler={handleFilterOption} filter={threshold} name="threshold" title={'Threshold'} defaultOptions={JSON.stringify({cutoff:120})}/>
+                <FilterOption handler={handleFilterOption} filter={wave} name="wave" title={'Wave'} defaultOptions={JSON.stringify({xAmplitude:20,xWavelength:120,xShift:0,yAmplitude:20,yWavelength:60,yShift:0,warp:false})}/>
             </div>
         </div>
     )
