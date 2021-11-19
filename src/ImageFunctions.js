@@ -206,6 +206,8 @@ export class Image {
         
         const reducerFunction = (previousVal,currentVal) => {
 
+            console.log('%cREDUCER FUNCTION REDUCING','color:#00ff00');
+
             let newImageData = previousVal;
             let newData = newImageData.data;
 
@@ -234,7 +236,6 @@ export class Image {
                 return blockFilteredData
             }
 
-            return 'hello'
         }
 
 
