@@ -323,16 +323,18 @@ export const sizeCanv = (img,canv) => {
 
 
 export class ByPixelFilter{
-    constructor(operation,options){
+    constructor(operation,name,options){
         this.operation = operation;
+        this.name = name;
         this.options = options;
         this.active = true;
     }
 }
 
 export class ByBlockFilter{
-    constructor(operation,options){
+    constructor(operation,name,options){
         this.operation = operation;
+        this.name = name;
         this.options = options;
         this.active = true;
     }

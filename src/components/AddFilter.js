@@ -51,9 +51,9 @@ const AddFilter = ({refreshApp}) => {
                 let tc = e.target.textContent.toLowerCase()
                 console.log('FILTER MATCHED = ' + filterNames[index]);
                 if(tc == 'bitmap' || tc == 'pixelate' || tc=='wave'){
-                    mainImage.addFilter(new ByBlockFilter(filter,{...defaultOptions}))
+                    mainImage.addFilter(new ByBlockFilter(filter,filterNames[index],{...defaultOptions}))
                 } else {
-                    mainImage.addFilter(new ByPixelFilter(filter,{...defaultOptions}))
+                    mainImage.addFilter(new ByPixelFilter(filter,filterNames[index],{...defaultOptions}))
 
                 }
                 console.log(mainImage.activeFilters)

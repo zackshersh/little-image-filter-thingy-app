@@ -22,8 +22,8 @@ const FilterCardCont = ({refreshApp}) => {
 
     const filterCards = mainImage.activeFilters.map((filter,index) => {
 
-        let operationType = filter.operation.name
-
+        let operationType = filter.name
+        console.log(operationType)
 
         switch (operationType) {
             case 'invert':
