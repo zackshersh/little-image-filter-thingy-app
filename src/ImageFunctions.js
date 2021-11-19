@@ -25,7 +25,7 @@ export class Image {
 
     init(canvas){
 
-        console.log('%cV 1.0','background-color:#ff00ff;padding:24px 48px 24px 48px;color:black')
+        console.log('%cV 1.1','background-color:#ff00ff;padding:24px 48px 24px 48px;color:black')
 
         this.canvas = canvas
         console.log('%c Initializing Image Object','background-color:orange;color:black')
@@ -188,9 +188,12 @@ export class Image {
 
 
         if(this.filtersCompiled.length > 0){
+            console.log('COMPILED FILTERS FOUND')
             let filteredData = this.applyFilters();
             // console.log(filteredData)
             this.ctx.putImageData(filteredData,0,0)
+        } else {
+            console.log('NO COMPILED FILTERS FOUND')
         }
 
         let performanceStop = performance.now();
