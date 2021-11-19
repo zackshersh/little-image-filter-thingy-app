@@ -1,0 +1,173 @@
+* {
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+
+button {
+    /* border: 1px solid darkslategray; */
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 5px;
+    min-width: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white
+}
+
+input[type='checkbox']{
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 6px;
+    max-width: 14px;
+    max-height: 14px;
+    
+}
+
+input[type='checkbox']:checked{
+    background-color: var(--b);
+}
+
+input[type='range']{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    flex-shrink: 0;
+    border-radius: 50px;
+    /* border: 1px solid black */
+
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 22px; /* Slider handle height */
+    background: yellow; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+
+
+
+.Slider {
+    padding: 0px
+}
+
+.Slider > * {
+    margin: 4px;
+}
+
+.Slider > div > input {
+    width: 90%
+}
+.Slider > div {
+    /* padding: 8px; */
+    display: flex;
+    align-items: center;
+}
+
+.Slider > div > * {
+    margin-right: 8px;
+    /* margin: 4px */
+}
+
+.Slider > p {
+    font-size: 12px;
+    /* margin: 4px; */
+    color: rgb(120,120,120)
+}
+
+@media screen and (max-width: 1000px) {
+
+    input[type='range']{
+        height: 15px; /* Specified height */
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        height: 15px;
+        width: 20px
+    }
+
+    .Slider > div > p  {
+        font-size: 12px;
+    }
+    
+}
+
+.Input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 4px
+
+}
+
+.Input > div {
+    display: flex;
+    align-items: center;
+}
+
+.Input > div > input {
+    padding: 4px 12px 4px 12px;
+    border-radius: 50px;
+    border: 1px solid #787878;
+    color: var(--b);
+    margin-right: 12px;
+}
+
+
+.Input > div > input:focus {
+    outline: none;
+}
+
+.Input > div > p {
+    font-size: 12px;
+    color: var(--b)
+}
+
+.Input > label {
+    font-size: 12px;
+    color: #787878;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+}
+
+.Select {
+    display: flex;
+    align-items: center;
+}
+
+.Select > select {
+    margin-right: 8px;
+    border-radius: 50px;
+    padding: 2px 8px 2px 8px;
+    color: var(--b);
+    border: 1px solid #787878;
+    outline: none;
+}
+
+.Select > label {
+    font-size: 12px;
+    color: #787878;
+}
+
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+
