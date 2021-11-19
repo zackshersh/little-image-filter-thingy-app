@@ -187,6 +187,7 @@ export class Image {
         this.ctx.drawImage(this.image,0,0,this.w,this.h);
 
 
+        
         if(this.filtersCompiled.length > 0){
             console.log('COMPILED FILTERS FOUND')
             let filteredData = this.applyFilters();
