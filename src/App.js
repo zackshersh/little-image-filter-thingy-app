@@ -22,7 +22,7 @@ function App() {
 
   const [exportDisplay, setExportDisplay] = useState('none');
 
-  const [infoDisplay, setInfoDisplay] = useState('none');
+  const [infoDisplay, setInfoDisplay] = useState('flex');
 
   const refreshApp = () => {
     console.log('%c<<<<<<<< REFRESHING APP >>>>>>>>>','background-color:cyan;color:black')
