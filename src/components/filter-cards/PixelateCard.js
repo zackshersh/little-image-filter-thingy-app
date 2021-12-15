@@ -41,7 +41,7 @@ const PixelateCard = ({filter,filterIndex,refreshApp}) => {
                     <input onChange={handleDisplayCheck} type="checkbox" defaultChecked={filterActive}/>                </div>
                 <h3>Pixelate</h3>
             </span>
-            <Slider handler={handleSliderChange} max={255} min={1} step={1} value={filter.options.pixelWidth} title={"Pixel Width"} />
+            <Slider handler={handleSliderChange} max={255} min={2} step={1} value={filter.options.pixelWidth} title={"Pixel Width"} />
         </div>
     )
 }

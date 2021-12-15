@@ -9,6 +9,7 @@ import { waitASec } from "./utils";
 
 import { Image, sizeCanv, applyFilters, AppliedFilter } from './ImageFunctions'
 import ExportModal from "./components/ExportModal";
+import InfoModal from "./components/InfoModal";
 
 
 export let mainImage = new Image();
@@ -20,6 +21,8 @@ function App() {
   const [refresh,setRefresh] = useState(0);
 
   const [exportDisplay, setExportDisplay] = useState('none');
+
+  const [infoDisplay, setInfoDisplay] = useState('none');
 
   const refreshApp = () => {
     console.log('%c<<<<<<<< REFRESHING APP >>>>>>>>>','background-color:cyan;color:black')
@@ -58,8 +61,9 @@ function App() {
   return (
     <div className="App">
       <ExportModal display={exportDisplay} setDisplay={setExportDisplay} />
+      <InfoModal display={infoDisplay} setDisplay={setInfoDisplay}/>
       <div className="Image-Editor">
-        <ImageDisplay refreshApp={refreshApp} setExportDisplay={setExportDisplay}/>
+        <ImageDisplay refreshApp={refreshApp} setExportDisplay={setExportDisplay} setInfoDisplay={setInfoDisplay}/>
         <SettingSuite refreshApp={refreshApp} uploadHandler={imageUploaded} />
       </div>
 

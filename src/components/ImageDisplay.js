@@ -9,9 +9,11 @@ import AddFilter from "./AddFilter";
 import PreviewRes from "./PreviewRes";
 import ExportButton from "./ExportButton";
 
+import InfoButton from "./InfoButton";
 
 
-const ImageDisplay = ({refreshApp,setExportDisplay}) => {
+
+const ImageDisplay = ({refreshApp, setExportDisplay, setInfoDisplay}) => {
 
 
     const handleZoom = (e) => {
@@ -78,8 +80,8 @@ const ImageDisplay = ({refreshApp,setExportDisplay}) => {
             <div className="Zoom-Cont">
                 <button id="zoomIn" onMouseDown={handleZoom}>+</button>
                 <button id="zoomOut" onMouseDown={handleZoom}>-</button>
-
             </div>
+            <InfoButton handler={setInfoDisplay} />
 
         </div>
     )

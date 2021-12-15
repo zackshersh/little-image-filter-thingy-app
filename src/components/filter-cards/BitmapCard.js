@@ -43,10 +43,10 @@ const BitmapCard = ({filter,filterIndex,refreshApp}) => {
     return (
         <div className="Filter-Card Saturation-Filter-Card">
             <button onMouseDown={handleXOut} className="x-out">x</button>
-            <span>
-                <div className="Display-Check-Cont">
+            <div className="Display-Check-Cont">
                     <input onChange={handleDisplayCheck} type="checkbox" defaultChecked={filterActive}/>
-                </div>
+            </div>
+            <span>
                 <h3>Bitmap</h3>
             </span>
             <Slider handler={handleSliderChange} max={24} min={1} step={1} value={filter.options.blockScaleFactor} title={'Scaling Factor'} />
