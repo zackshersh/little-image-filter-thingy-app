@@ -8,9 +8,19 @@ Little Image Filter Web App Thingy is (as the name suggests) a web-app that allo
 ![JFK](./readme-imgs/jfk-og.png) 
 Original Image
 
-<div style="display: flex;">
-    <img src="./readme-imgs/jfk-og.png">
-    <img src="./readme-imgs/jfk-bit.png">
-</div>
+&nbsp;
+
+![JFK-Bitmap](./readme-imgs/jfk-bit.png) 
+Bitmap, Invert and Gradient Map 
+
+&nbsp;
+
+![JFK-Pixel](./readme-imgs/jfk-pixel.png) 
+Pixelate, Saturate and Noise
+
+&nbsp;
+
+![JFK-Wave](./readme-imgs/jfk-wave.png) 
+Wave (Warp selected) and Wave
 
 
