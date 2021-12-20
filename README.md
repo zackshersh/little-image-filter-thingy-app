@@ -20,7 +20,7 @@ Pixelate, Saturate and Noise
 
 &nbsp;
 
-![JFK-Wave](./readme-imgs/jfk-wave.png) 
+![JFK-Wave](./readme-imgs/jfk-wave.png | width=200) 
 Wave (Warp selected) and Wave
 
 
