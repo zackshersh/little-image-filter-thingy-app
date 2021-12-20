@@ -8,10 +8,6 @@ Little Image Filter Web App Thingy is (as the name suggests) a web-app that allo
 ![JFK](./readme-imgs/jfk-og.png) 
 Original Image
 
-<pre>
-
-
-
-</pre>
+<img src="./readme-imgs/jfk-og.png">
 
 
