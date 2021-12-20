@@ -123,6 +123,67 @@
     background: var(--b);
 }
 
+.Info-Button {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+}
+
+.Info-Button > button {
+    background-color: rgb(255, 113, 78);
+    padding: 12px 24px;
+}
+
+.Info-Modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+    font-weight: 100;
+}
+
+.Info-Inner-Cont {
+    width: 60vw;
+    max-width: 600px;
+    min-width: 300px;
+    max-height: 900px;
+    position: relative;
+    padding: 24px 24px 24px 24px;
+    border-radius: 15px;
+    background-color: rgb(255, 113, 78);
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Info-Inner-Cont > * {
+    margin-bottom: 12px;
+}
+
+.Info-Inner-Cont > img {
+    width: 50%;
+    margin-bottom: 24px;
+}
+
+.Info-Inner-Cont > .X-Out {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background: none;
+    border: none;
+}
+
+.Info-Inner-Cont > .X-Out:hover {
+    background-color: black;
+    color:rgb(255, 113, 78);
+}
+
 
 
 @media screen and (min-width: 1000px) {

@@ -182,12 +182,13 @@
 
 .Filter-Card {
     text-transform: capitalize;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: white;
     border-radius: 24px;
     padding: 12px;
     margin-top: 4px;
     position: relative;
+    overflow: hidden;
 }
 
 .Filter-Card > span {
@@ -199,7 +200,9 @@
 
 .Filter-Card > span > * {
     margin-right: 8px;
+    margin-left: 20px;
 }
+
 
 
 .Filter-Card > *:not(span) {
@@ -207,11 +210,21 @@
     margin-top: 8px;
 }
 
-.Filter-Card > span > .Display-Check-Cont {
+.Display-Check-Cont {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: -35px;
+    top: -20px;
 }
+
+.Display-Check-Cont > input {
+    border-radius: none;
+    padding: 500px 15px;
+}
+
+
 
 .Filter-Card > .Checkbox-Cont {
     display: flex;
