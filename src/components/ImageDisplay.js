@@ -27,28 +27,6 @@ const ImageDisplay = ({refreshApp, setExportDisplay, setInfoDisplay}) => {
 
     const zoom = (amount,duration) => {
 
-        
-        // const steps = (duration/1000)*60;
-        
-        // let canvas = document.querySelector('.imageCanv');
-        // let canvasWidth = getComputedStyle(canvas).width;
-        // let w = parseInt(canvasWidth.split('px')[0]);
-        
-        // let time = 0;
-        
-        // let interval = setInterval(function(){
-            
-            //     let newWidth = Math.floor(lerp(w,(w*amount),easeOut(time/duration)));
-            //     canvas.style.width = newWidth + 'px';
-            
-            //     if(time >= duration){
-                //         clearInterval(interval);
-                //         return
-                //     }
-                
-                //     time += duration/steps
-                
-                // },duration/steps)
                 
         let canvas = document.querySelector('.imageCanv');
         let canvasWidth = getComputedStyle(canvas).width;
@@ -57,9 +35,6 @@ const ImageDisplay = ({refreshApp, setExportDisplay, setInfoDisplay}) => {
         let targetW = w * amount;
 
         canvas.style.width = targetW + "px";
-        // console.log(w,)
-
-
                 
 
     }

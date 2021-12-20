@@ -99,7 +99,7 @@ export function bitmap(imageData,{canvas,blockScaleFactor=2,randomPattern=false}
             for(var y2=0; y2<(patternW*blockScaleFactor); y2+=blockScaleFactor){
                 for(var x2=0; x2<(patternW*blockScaleFactor); x2+=blockScaleFactor){
 
-                    if(pattern[patternIndex] <= mappedBrightness){
+                    if(pattern[patternIndex] < mappedBrightness){
                         fillPixelRect(newImageData, x+x2, y+y2, blockScaleFactor, blockScaleFactor, [255,255,255,a])
                     } else {
                         fillPixelRect(newImageData, x+x2, y+y2, blockScaleFactor, blockScaleFactor, [0,0,0,a])

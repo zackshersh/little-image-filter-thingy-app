@@ -1,9 +1,14 @@
 import React from 'react';
 
-const InfoButton = (handler) => {
+const InfoButton = ({handler}) => {
+
+    const handleClick = () => {
+        handler('flex');
+    }
+
     return (
         <div className="Info-Button">
-            <button onMouseDown={handler}></button>
+            <button onMouseDown={handleClick}>?</button>
         </div>
     )
 }

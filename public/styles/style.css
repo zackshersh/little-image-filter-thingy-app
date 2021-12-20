@@ -123,6 +123,16 @@
     background: var(--b);
 }
 
+.Info-Button {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+}
+
+.Info-Button > button {
+    background-color: rgb(255, 113, 78);
+    padding: 12px 24px;
+}
 
 .Info-Modal {
     position: absolute;
@@ -152,9 +162,26 @@
     justify-content: flex-start;
 }
 
+.Info-Inner-Cont > * {
+    margin-bottom: 12px;
+}
+
 .Info-Inner-Cont > img {
     width: 50%;
     margin-bottom: 24px;
+}
+
+.Info-Inner-Cont > .X-Out {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background: none;
+    border: none;
+}
+
+.Info-Inner-Cont > .X-Out:hover {
+    background-color: black;
+    color:rgb(255, 113, 78);
 }
 
 
