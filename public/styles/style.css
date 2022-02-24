@@ -11,6 +11,10 @@
 }
 
 
+body {
+    overscroll-behavior: none;
+}
+
 .Image-Editor {
     width: 100vw;
     height: 100vh;
