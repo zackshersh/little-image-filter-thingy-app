@@ -37,7 +37,7 @@ This project was created in ReactJS and heavily utilized the Canvas Web API to m
 
 ---- 
 ## Use it!
-<p>Little Image Filter Web-App Thingy can be tried out at <a href=" https://zackshersh.github.io/little-image-filter-thingy-app/">this link</a>. </p>
+Little Image Filter Web-App Thingy can be tried out at [this link](https://zackshersh.github.io/little-image-filter-thingy-app/)
 
 ----
 
