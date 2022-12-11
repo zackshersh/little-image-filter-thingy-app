@@ -7,7 +7,7 @@ import { mainImage } from "../../App";
 const NoiseCard = ({filter,filterIndex,refreshApp}) => {
 
     const [filterActive,setFilterActive] = useState(filter.active);
-    const [monochr,setMonochr] = useState(filter.options.monochromatic=true);
+    const [monochr,setMonochr] = useState(filter.options.monochromatic);
 
     const handleDisplayCheck = (e) => {
         if(e.target.checked){

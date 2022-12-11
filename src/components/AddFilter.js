@@ -40,6 +40,7 @@ const AddFilter = ({refreshApp}) => {
         handleExpand()
 
         let allFilters = [invert,exposure,saturation,gradientMap,noise,threshold,pixelate,bitmap,wave];
+        // let filterNames = ["invert","exposure","saturation","gradientMap","noise","threshold","pixelate","bitmap","wave"];
         let filterNames = ["invert","exposure","saturation","gradientMap","noise","threshold","pixelate","bitmap","wave"];
 
         console.log(e.target.dataset)
@@ -82,7 +83,7 @@ const AddFilter = ({refreshApp}) => {
             <div style={{width:width,height:height,paddingBottom:padding,paddingTop:padding*2}} className="Add-Filter-Options">
                 <FilterOption handler={handleFilterOption} filter={bitmap} name="bitmap" title={'Bitmap'} defaultOptions={JSON.stringify({blockScaleFactor:4,randomPattern:false})} />
                 <FilterOption handler={handleFilterOption} filter={exposure} name="exposure" title={'Exposure'} defaultOptions={JSON.stringify({value:40})}/>
-                <FilterOption handler={handleFilterOption} filter={gradientMap} name="gradientMap" title={'Gradient Map'} defaultOptions={JSON.stringify({darkColor:[0,0,255],lightColor:[255,255,255]})}/>
+                {/* <FilterOption handler={handleFilterOption} filter={gradientMap} name="gradientMap" title={'Gradient Map'} defaultOptions={JSON.stringify({darkColor:[0,0,255],lightColor:[255,255,255]})}/> */}
                 <FilterOption handler={handleFilterOption} filter={invert} name="invert" title={'Invert'} defaultOptions={JSON.stringify({filler:1})}/>
                 <FilterOption handler={handleFilterOption} filter={noise} name="noise" title={'Noise'} defaultOptions={JSON.stringify({max:100,monochromatic:true})}/>
                 <FilterOption handler={handleFilterOption} filter={pixelate} name="pixelate" title={'Pixelate'} defaultOptions={JSON.stringify({pixelWidth:12})}/>

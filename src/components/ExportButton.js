@@ -15,7 +15,7 @@ const ExportButton = ({setDisplay}) => {
 
     return (
         <div className="Export-Cont Menu-Bar-Cont">
-            <button class="Menu-Bar-Button" onMouseDown={handleMouseDown}>Export</button>
+            <button className="Menu-Bar-Button" onMouseDown={handleMouseDown}>Export</button>
         </div>
     )
 }
