@@ -15,6 +15,7 @@ import GradientMapCard from "./filter-cards/GradientMapCard";
 import BitmapCard from "./filter-cards/BitmapCard";
 import PixelateCard from "./filter-cards/PixelateCard";
 import WaveCard from "./filter-cards/WaveCard";
+import HueCard from "./filter-cards/HueCard";
 
 const FilterCardCont = ({refreshApp}) => {
 
@@ -30,6 +31,8 @@ const FilterCardCont = ({refreshApp}) => {
                 return (<InvertCard key={index} filter={filter} filterIndex={index} refreshApp={refreshApp} />);
             case 'saturation':
                 return (<SaturationCard key={index} filter={filter} filterIndex={index} refreshApp={refreshApp}  />);
+            case 'hue':
+                return (<HueCard key={index} filter={filter} filterIndex={index} refreshApp={refreshApp}/>)
             case 'noise':
                 return (<NoiseCard key={index} filter={filter} filterIndex={index} refreshApp={refreshApp}  />);
             case 'exposure':

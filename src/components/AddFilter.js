@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 
 import { ByBlockFilter, ByPixelFilter } from "../ImageFunctions";
-import { invert, exposure, saturation, gradientMap, noise, threshold } from '../pixelFilters';
+import { invert, exposure, saturation, gradientMap, noise, threshold, hue } from '../pixelFilters';
 import { pixelate, bitmap } from "../blockFilters";
 import { wave } from "../displacementFilters";
 
@@ -39,15 +39,14 @@ const AddFilter = ({refreshApp}) => {
         console.log(e.target.dataset.filter)
         handleExpand()
 
-        let allFilters = [invert,exposure,saturation,gradientMap,noise,threshold,pixelate,bitmap,wave];
-        // let filterNames = ["invert","exposure","saturation","gradientMap","noise","threshold","pixelate","bitmap","wave"];
-        let filterNames = ["invert","exposure","saturation","gradientMap","noise","threshold","pixelate","bitmap","wave"];
+        let allFilters = [invert,exposure,saturation,gradientMap,noise,threshold,pixelate,bitmap,wave,hue];
+
+        let filterNames = ["invert","exposure","saturation","gradientMap","noise","threshold","pixelate","bitmap","wave","hue"];
 
         console.log(e.target.dataset)
         let defaultOptions = JSON.parse(e.target.dataset.options)
         allFilters.forEach((filter,index) => {
-            // console.log(filterNames[index])
-            // console.log(e.target.dataset.filter)
+
             if(e.target.dataset.filter == filterNames[index]){
                 let tc = e.target.textContent.toLowerCase()
                 console.log('FILTER MATCHED = ' + filterNames[index]);
@@ -81,15 +80,15 @@ const AddFilter = ({refreshApp}) => {
                 <button className="AF-Button Menu-Bar-Button" onMouseDown={handleExpand}>Filters +</button>
             </div>
             <div style={{width:width,height:height,paddingBottom:padding,paddingTop:padding*2}} className="Add-Filter-Options">
-                <FilterOption handler={handleFilterOption} filter={bitmap} name="bitmap" title={'Bitmap'} defaultOptions={JSON.stringify({blockScaleFactor:4,randomPattern:false})} />
                 <FilterOption handler={handleFilterOption} filter={exposure} name="exposure" title={'Exposure'} defaultOptions={JSON.stringify({value:40})}/>
-                {/* <FilterOption handler={handleFilterOption} filter={gradientMap} name="gradientMap" title={'Gradient Map'} defaultOptions={JSON.stringify({darkColor:[0,0,255],lightColor:[255,255,255]})}/> */}
+                <FilterOption handler={handleFilterOption} filter={hue} name="hue" title={'Hue'} defaultOptions={JSON.stringify({value:40})}/>
                 <FilterOption handler={handleFilterOption} filter={invert} name="invert" title={'Invert'} defaultOptions={JSON.stringify({filler:1})}/>
                 <FilterOption handler={handleFilterOption} filter={noise} name="noise" title={'Noise'} defaultOptions={JSON.stringify({max:100,monochromatic:true})}/>
                 <FilterOption handler={handleFilterOption} filter={pixelate} name="pixelate" title={'Pixelate'} defaultOptions={JSON.stringify({pixelWidth:12})}/>
                 <FilterOption handler={handleFilterOption} filter={saturation} name="saturation" title={'Saturation'} defaultOptions={JSON.stringify({amount:3})}/>
                 <FilterOption handler={handleFilterOption} filter={threshold} name="threshold" title={'Threshold'} defaultOptions={JSON.stringify({cutoff:120})}/>
                 <FilterOption handler={handleFilterOption} filter={wave} name="wave" title={'Wave'} defaultOptions={JSON.stringify({xAmplitude:20,xWavelength:120,xShift:0,yAmplitude:20,yWavelength:60,yShift:0,warp:false})}/>
+                <FilterOption handler={handleFilterOption} filter={bitmap} name="bitmap" title={'Bitmap'} defaultOptions={JSON.stringify({blockScaleFactor:4,randomPattern:false})} />
             </div>
         </div>
     )

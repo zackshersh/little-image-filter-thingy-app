@@ -1,5 +1,5 @@
 
-import { lerp, rndmInt, rndmSign } from "./utils"
+import { rgbToHsl, hslToRgb, lerp, rgbToHex, rndmInt, rndmSign } from "./utils"
 
 
 export function invert(pixel){
@@ -75,6 +75,27 @@ export function saturation(pixel,{amount=3}){
     let blendB = lerp(grayVal,b,amount)
 
     return [Math.floor(blendR),Math.floor(blendG),Math.floor(blendB),Math.floor(pixel[3])];
+}
+
+export function hue(pixel,{value=0.5}){
+    
+    let [r,g,b] = pixel;
+    // let [h,s,l] = rgbToHsl(r,g,b);
+
+    // h += value;
+
+    // let [r2,g2,b2] = hslToRgb(h,s,l);
+
+    let r2 = Math.floor(r/120)*120;
+    let g2 = Math.floor(g/120)*120;
+    let b2 = Math.floor(b/120)*120;
+
+
+    return [r2,g2,b2,pixel[3]]
+}
+
+export function simplifyColors(pixel, {amount=20}){
+
 }
 
 
